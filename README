@@ -1,0 +1,17 @@
+=============================
+jQuery Tablesorter fork
+=============================
+
+
+This is a fork from the great plugin from Christian Bach, jQuery.tablesorter.
+
+I created this fork to try to fix issues I'll found in this plugin.
+
+
+Isues fixed:
+
+	- Tables with headers with colspan didn't work well.
+	
+	
+ 
+

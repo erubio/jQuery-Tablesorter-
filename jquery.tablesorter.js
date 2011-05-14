@@ -567,9 +567,16 @@
 			function updateHeaderSortCount(table, sortList) {
                 var c = table.config,
                     l = sortList.length;
+                var colspan = 0;
                 for (var i = 0; i < l; i++) {
-                    var s = sortList[i],
-                        o = c.headerList[s[0]];
+                    var s = sortList[i];
+                    for(var j=0;j<s[0];j++){
+                        var currentColSpan = $(c.headerList[j]).attr("colspan");
+                        if(currentColSpan > 1){
+                            colspan += (currentColSpan -1);
+                        }
+                    }
+                    var o = c.headerList[s[0]- colspan];
                     o.count = s[1];
                     o.count++;
                 }
